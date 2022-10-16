@@ -6,7 +6,7 @@ import org.springframework.ui.set
 import org.springframework.web.bind.annotation.GetMapping
 
 @Controller
-class Maincontroller {
+class MainController {
   @GetMapping("/")
   fun gerb(): String {
     return "gerb"
