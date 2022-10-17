@@ -10,4 +10,8 @@ ENV APP_HOME=/home/gradle/project
 WORKDIR $APP_HOME
 COPY --from=build $APP_HOME/build/libs/$ARTIFACT_NAME .
 EXPOSE 8080
+ENV PORT="5432"
+LABEL author="Voyakin Georgii Sergeevich"
+LABEL group="IKBO-13-19"
 ENTRYPOINT exec java -jar $ARTIFACT_NAME
+ONBUILD RUN echo 'Сборка и запуск произведены. Автор:Воякин Георгий Сергеевич'
