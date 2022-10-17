@@ -9,6 +9,6 @@ import org.springframework.web.bind.annotation.GetMapping
 class MainController {
   @GetMapping("/")
   fun gerb(): String {
-    return "gerb"
+    return "gerb.html"
   }
 }
