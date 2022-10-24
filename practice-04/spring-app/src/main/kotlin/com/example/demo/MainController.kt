@@ -9,5 +9,14 @@ class MainController(
     private val clientsRepository: ClientsRepository,
     private val malfunctionRepository: MalfunctionRepository
 ) {
-  
+    @PostMapping("/api/cars")
+    fun addCar(@RequestBody car: Car): ResponseEntity<Car> {
+        carRepository.save(car)
+        return ResponseEntity.ok(car)
+    }
+
+    @GetMapping("/api/cars")
+    fun getCars(): ResponseEntity<MutableList<Car>> {
+        return ResponseEntity.ok(carRepository.findAll())
+    }
 }
