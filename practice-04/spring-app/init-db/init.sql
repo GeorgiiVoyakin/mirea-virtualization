@@ -1,0 +1,2 @@
+CREATE USER zabbix WITH PASSWORD 'zabbix';
+CREATE DATABASE zabbix OWNER zabbix;
